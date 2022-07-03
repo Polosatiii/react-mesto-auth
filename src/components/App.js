@@ -56,7 +56,7 @@ function App() {
         navigate("/");
       })
       .catch(() => {
-        // setPopupImage(reject);
+        setPopupImage(reject);
         setPopupTitle("Что-то пошло не так! Попробуйте ещё раз.");
         handleInfoTooltip();
       });

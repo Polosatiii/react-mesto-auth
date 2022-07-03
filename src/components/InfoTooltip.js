@@ -1,7 +1,7 @@
 function InfoTooltip(props) {
   return (
     <div
-      className={`popup ${props.isOpen ? "popup_opened" : ""}`}
+      className={`popup ${props.isOpen ? "popup_is-open" : ""}`}
       onClick={props.onCloseClick}
     >
       <div className="popup__info">
