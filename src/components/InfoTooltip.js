@@ -2,13 +2,13 @@ function InfoTooltip(props) {
   return (
     <div
       className={`popup ${props.isOpen ? "popup_is-open" : ""}`}
-      onClick={props.onCloseClick}
+      onClick={props.onClose}
     >
-      <div className="popup__info">
+      <div className="popup__info" onClick={(e) => e.stopPropagation()}>
         <img className="popup__status" src={props.image} alt={props.title} />
         <h2 className="popup__message">{props.title}</h2>
         <button
-          className="popup__btn-close"
+          className="popup__close"
           type="button"
           title="Закрыть"
           onClick={props.onClose}

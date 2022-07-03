@@ -188,12 +188,6 @@ function App() {
     setIsImagePopupOpen(true);
   }
 
-  function handlePopupCloseClick(evt) {
-    if (evt.target.classList.contains("popup_is-open")) {
-      closeAllPopups();
-    }
-  }
-
   function handleInfoTooltip() {
     setInfoTooltip(true);
   }
@@ -301,21 +295,18 @@ function App() {
 
           <EditProfilePopup
             isOpen={isEditProfilePopupOpen}
-            onCloseClick={handlePopupCloseClick}
             onClose={closeAllPopups}
             onSubmit={handleUpdateUser}
           />
 
           <AddPlacePopup
             isOpen={isAddPlacePopupOpen}
-            onCloseClick={handlePopupCloseClick}
             onClose={closeAllPopups}
             onSubmit={handleAddPlaceSubmit}
           />
 
           <EditAvatarPopup
             isOpen={isEditAvatarPopupOpen}
-            onCloseClick={handlePopupCloseClick}
             onClose={closeAllPopups}
             onSubmit={handleAvatarUpdate}
           />
@@ -323,7 +314,6 @@ function App() {
           <ImagePopup
             card={selectedCard}
             isOpen={isImagePopupOpen}
-            onCloseClick={handlePopupCloseClick}
             onClose={closeAllPopups}
           />
 
@@ -331,7 +321,6 @@ function App() {
             image={popupImage}
             title={popupTitle}
             isOpen={isInfoTooltipOpen}
-            onCloseClick={handlePopupCloseClick}
             onClose={closeAllPopups}
           />
         </div>

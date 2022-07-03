@@ -4,13 +4,16 @@ function ImagePopup(props) {
       className={`popup popup_fuul-size-photo ${
         props.isOpen ? "popup_is-open" : ""
       }`}
-      onClick={props.onCloseClick}
+      onClick={props.onClose}
     >
-      <div className="popup__container-photo">
+      <div
+        className="popup__container-photo"
+        onClick={(e) => e.stopPropagation()}
+      >
         <button
           onClick={props.onClose}
           type="button"
-          className="popup__close popup__close-full"
+          className="popup__close"
         />
         <figure className="popup__figure">
           <img
