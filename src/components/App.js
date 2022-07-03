@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import api from "../utils/api";
@@ -188,14 +188,12 @@ function App() {
     setIsImagePopupOpen(true);
   }
 
+  const handlePopupCloseClick = React.useCallback(() => {
+    closeAllPopups();
+  }, []);
+
   function handleInfoTooltip() {
     setInfoTooltip(true);
-  }
-
-  function handlePopupCloseClick(evt) {
-    if (evt.target.classList.contains("popup_opened")) {
-      closeAllPopups();
-    }
   }
 
   function closeAllPopups() {
