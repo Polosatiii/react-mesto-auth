@@ -9,7 +9,7 @@
 @import url(./blocks/header/__text/header__text.css);
 @import url(../src/blocks/logo/logo.css);
 @import url(./blocks/login/login.css);
-@import url(./blocks/login/__button/__form/login__form.css);
+@import url(./blocks/login/__button/login__button.css);
 @import url(./blocks/login/__form/login__form.css);
 @import url(./blocks/login/__input/login__input.css);
 @import url(./blocks/login/__link/login__link.css);

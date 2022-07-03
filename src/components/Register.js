@@ -39,7 +39,7 @@ function Register(props) {
           onChange={handlePasswordInput}
           required
         />
-        <button className="login__btn" type="submit">
+        <button className="login__button" type="submit">
           Зарегистрироваться
         </button>
       </form>
