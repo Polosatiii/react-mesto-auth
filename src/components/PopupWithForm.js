@@ -2,7 +2,7 @@ function PopupWithForm(props) {
   return (
     <section
       className={`popup popup_form_${props.name} ${
-        props.isOpen ? `popup_is-open` : ""
+        props.isOpen ? "popup_is-open" : ""
       }`}
       onMouseDown={props.onCloseClick}
     >

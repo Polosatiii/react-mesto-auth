@@ -30,7 +30,7 @@ function App() {
   const [emailName, setEmailName] = useState(null);
   const [popupImage, setPopupImage] = useState("");
   const [popupTitle, setPopupTitle] = useState("");
-  const [infoTooltip, setInfoTooltip] = useState(false);
+  const [isInfoTooltipOpen, setInfoTooltip] = useState(false);
 
   function onRegister(email, password) {
     auth
@@ -188,9 +188,11 @@ function App() {
     setIsImagePopupOpen(true);
   }
 
-  const handlePopupCloseClick = React.useCallback(() => {
-    closeAllPopups();
-  }, []);
+  function handlePopupCloseClick(evt) {
+    if (evt.target.classList.contains("popup_is-open")) {
+      closeAllPopups();
+    }
+  }
 
   function handleInfoTooltip() {
     setInfoTooltip(true);
@@ -210,7 +212,7 @@ function App() {
       isEditProfilePopupOpen ||
       isAddPlacePopupOpen ||
       selectedCard ||
-      infoTooltip
+      isInfoTooltipOpen
     ) {
       function handleEsc(evt) {
         if (evt.key === "Escape") {
@@ -229,7 +231,7 @@ function App() {
     isEditProfilePopupOpen,
     isAddPlacePopupOpen,
     selectedCard,
-    infoTooltip,
+    isInfoTooltipOpen,
   ]);
 
   function onSignOut() {
@@ -328,7 +330,7 @@ function App() {
           <InfoTooltip
             image={popupImage}
             title={popupTitle}
-            isOpen={infoTooltip}
+            isOpen={isInfoTooltipOpen}
             onCloseClick={handlePopupCloseClick}
             onClose={closeAllPopups}
           />

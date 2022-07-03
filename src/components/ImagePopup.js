@@ -1,8 +1,9 @@
 function ImagePopup(props) {
   return (
     <div
-      className={`popup popup_fuul-size-photo' & (props.isOpen ? ' popup_is-open' : ''}`}
-      id="image-viewer"
+      className={`popup popup_fuul-size-photo ${
+        props.isOpen ? "popup_is-open" : ""
+      }`}
       onClick={props.onCloseClick}
     >
       <div className="popup__container-photo">

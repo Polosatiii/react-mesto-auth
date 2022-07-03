@@ -40,6 +40,7 @@
 @import url(../src/blocks/footer/footer.css);
 @import url(../src/blocks/footer/__project-name/footer__project-name.css);
 @import url(../src/blocks/popup/popup.css);
+@import url(./blocks/popup/__btn-close/popup__btn-close.css);
 @import url(./blocks/popup/__message/popup__message.css);
 @import url(./blocks/popup/__status/popup__status.css);
 @import url(./blocks/popup/__info/popup__info.css);
